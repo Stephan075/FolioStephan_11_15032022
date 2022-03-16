@@ -1,0 +1,33 @@
+header {
+  font-size: 2.4rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  height: 4rem;
+}
+
+.navHeader {
+  display: flex;
+  align-items: center;
+  color: #ff6060;
+  font-family: var(--font-family);
+}
+.navItem {
+  margin: 3rem;
+}
+
+/* Responsive */
+
+/* Landscape phone to portrait tablet */
+@media only screen and (max-width: 767px) {
+  header {
+    font-size: 1.2rem;
+  }
+  .navItem {
+    margin: 2rem;
+    text-transform: uppercase;
+  }
+}
