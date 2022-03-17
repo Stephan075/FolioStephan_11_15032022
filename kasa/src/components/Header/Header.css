@@ -18,6 +18,9 @@ header {
 .navItem {
   margin: 3rem;
 }
+.navItem:nth-last-child(1) {
+  margin-right: 0;
+}
 
 /* Responsive */
 
@@ -25,6 +28,7 @@ header {
 @media only screen and (max-width: 767px) {
   header {
     font-size: 1.2rem;
+    margin-bottom: 12px;
   }
   .navItem {
     margin: 2rem;
