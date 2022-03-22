@@ -1,0 +1,7 @@
+.fa-star {
+  color: #e3e3e3;
+}
+
+.star-color-red {
+  color: var(--primaire);
+}

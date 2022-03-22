@@ -1,0 +1,22 @@
+.ApartmentList {
+  background-color: #f7f7f7;
+  margin: 3rem 0;
+  border-radius: 25px;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 1rem;
+}
+
+/* Landscape phone to portrait tablet */
+@media only screen and (max-width: 767px) {
+  .ApartmentList {
+    background-color: transparent;
+    margin: 1rem 0;
+  }
+  .cards {
+    padding: 0;
+  }
+}

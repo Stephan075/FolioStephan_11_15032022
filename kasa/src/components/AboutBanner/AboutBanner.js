@@ -1,4 +1,4 @@
-import "./AboutBanner.css";
+import "./aboutBanner.css";
 import bannerImg from "../../assets/about.jpeg";
 
 const AboutBanner = () => {

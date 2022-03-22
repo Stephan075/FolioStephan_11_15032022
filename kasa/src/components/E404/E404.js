@@ -1,4 +1,4 @@
-import "./E404.css";
+import "./e404.css";
 
 const E404 = () => {
   return (

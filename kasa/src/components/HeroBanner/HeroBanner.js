@@ -1,4 +1,4 @@
-import "./HeroBanner.css";
+import "./heroBanner.css";
 import bannerImg from "../../assets/heroBanner.png";
 
 const HerroBanner = () => {

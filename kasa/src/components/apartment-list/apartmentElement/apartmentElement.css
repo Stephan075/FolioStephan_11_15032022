@@ -1,0 +1,46 @@
+.cards_item {
+  display: flex;
+  padding: 2rem;
+}
+
+.card {
+  background-color: #ff6060;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+.card_title {
+  color: #ffffff;
+  font-size: 1.8rem;
+  line-height: 25.67px;
+  margin: 0;
+}
+
+@media only screen and (min-width: 400px) {
+  .cards_item {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 560px) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .cards_item {
+    padding: 1rem 0;
+  }
+}

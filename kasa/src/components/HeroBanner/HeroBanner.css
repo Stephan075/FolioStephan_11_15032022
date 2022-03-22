@@ -35,10 +35,12 @@
 @media only screen and (max-width: 767px) {
   .heroBannerImg {
     height: 11.1rem;
+    border-radius: 10px;
   }
 
   .heroBannerWrapper {
     height: 11.1rem;
+    border-radius: 10px;
   }
 
   .heroBannerText {
