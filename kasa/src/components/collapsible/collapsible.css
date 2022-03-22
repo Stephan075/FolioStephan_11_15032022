@@ -39,21 +39,7 @@
   cursor: pointer;
   margin: auto;
 }
-.filter__custom-arrow-0deg {
-  transition: transform 300ms;
-  transform: rotate(0deg);
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 1px;
-  right: 1px;
-  border-radius: 5px;
-  height: 95%;
-  width: 40px;
-  cursor: pointer;
-  margin: auto;
-}
+
 .filter__custom-arrow::before {
   content: url("../../assets/arrow-bottom.svg");
 }
