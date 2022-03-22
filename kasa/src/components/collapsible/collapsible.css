@@ -1,7 +1,59 @@
-.fa-star {
-  color: #e3e3e3;
+.collapsible .toggle {
+  position: relative;
+  color: #fff;
+  background: var(--primaire);
+  border: unset;
+  cursor: pointer;
+  font: unset;
+  padding: 0.5rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  height: 47px;
+  font-size: 1.8rem;
+  text-align: start;
+  padding-left: 2rem;
 }
 
-.star-color-red {
+.collapsible .content {
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background: #f7f7f7;
+  padding: 1rem;
   color: var(--primaire);
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.filter__custom-arrow {
+  transition: transform 300ms;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1px;
+  right: 1px;
+  border-radius: 5px;
+  height: 95%;
+  width: 40px;
+  cursor: pointer;
+  margin: auto;
+}
+.filter__custom-arrow-0deg {
+  transition: transform 300ms;
+  transform: rotate(0deg);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1px;
+  right: 1px;
+  border-radius: 5px;
+  height: 95%;
+  width: 40px;
+  cursor: pointer;
+  margin: auto;
+}
+.filter__custom-arrow::before {
+  content: url("../../assets/arrow-bottom.svg");
 }
