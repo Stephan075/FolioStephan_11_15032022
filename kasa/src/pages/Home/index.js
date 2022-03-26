@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import AboutBanner from "../../components/aboutBanner/AboutBanner.js";
 import ApartmentList from "../../components/apartment-list/ApartmentList.js";
 import Collapsible from "../../components/collapsible/Collapsible.js";
@@ -10,8 +11,11 @@ import Rating from "../../components/rating/Rating.js";
 import AboutPage from "../about/index.js";
 import Logements from "./logements.json";
 
-function App() {
+const Home = (props) => {
+  // const [data, setData] = useState([]);
+
   // useEffect(() => {
+  //   console.log("test");
   //   const fetchData = async () => {
   //     try {
   //       const response = await fetch("/logements.json");
@@ -26,19 +30,20 @@ function App() {
   //   fetchData();
   // }, []);
 
+  console.log({ props });
   return (
     <>
       {/* <E404 /> <Footer /> */}
-      <Header />
+      {/* <Header /> */}
       {/* <AboutBanner /> */}
-      <HerroBanner />
-      {/* <ApartmentList /> */}
+      {/* <HerroBanner /> */}
+      <ApartmentList />
       {/* <Rating /> */}
       {/* <AboutPage /> */}
       {/* <Footer /> */}
-      <ApartmentList />
+      {/* <ApartmentList /> */}
     </>
   );
-}
+};
 
-export default App;
+export default Home;
