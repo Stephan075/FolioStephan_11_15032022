@@ -12,10 +12,11 @@ function App() {
     <>
       {/* <E404 /> <Footer /> */}
       <Header />
-      {/* <AboutBanner /> */}
+      <AboutBanner />
       {/* <HerroBanner /> */}
       {/* <ApartmentList /> */}
       {/* <Rating /> */}
+
       <Collapsible label="Description">
         {/* enfant */}
         <p>
@@ -28,7 +29,7 @@ function App() {
         </p>
       </Collapsible>
       <Collapsible label="Équipements">
-        <ul>
+        <ul className="collapse_list">
           <li>Parking</li>
           <li>Sèche Cheveux</li>
           <li>Machine à laver</li>
