@@ -1,0 +1,11 @@
+.colAbout {
+  width: 75%;
+  margin: 30px auto;
+}
+
+/* Responsive */
+@media only screen and (max-width: 767px) {
+  .colAbout {
+    width: 100%;
+  }
+}

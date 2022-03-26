@@ -21,5 +21,3 @@ const Collapsible = (props) => {
 };
 
 export default Collapsible;
-
-// https://www.youtube.com/watch?v=4F8EYGao9pc

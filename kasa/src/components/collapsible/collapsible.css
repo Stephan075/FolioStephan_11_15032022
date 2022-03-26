@@ -6,8 +6,8 @@
   cursor: pointer;
   font: unset;
   padding: 0.5rem;
-  border-radius: 10px;
-  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 0rem;
   width: 100%;
   height: 47px;
   font-size: 1.8rem;
@@ -15,8 +15,12 @@
   padding-left: 2rem;
 }
 
+.collapsible {
+  margin-bottom: 2rem;
+}
+
 .collapsible .content {
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid #fff;
   background: #f7f7f7;
   padding: 1rem;
