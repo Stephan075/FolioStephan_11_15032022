@@ -1,6 +1,5 @@
 import AboutBanner from "../../components/aboutBanner/AboutBanner";
 import Collapsible from "../../components/collapsible/Collapsible";
-import Footer from "../../components/footer/Footer";
 import "./aboutPage.css";
 
 const AboutPage = (props) => {
