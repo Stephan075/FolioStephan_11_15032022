@@ -3,25 +3,19 @@ import { BrowserRouter as Router } from "react-router-dom";
 import ApartmentList from "../../components/apartment-list/ApartmentList.js";
 
 const Home = (props) => {
+  // Test fetch data
   // const [data, setData] = useState([]);
 
   // useEffect(() => {
   //   console.log("test");
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch("/logements.json");
-
-  //       const { logementsData } = await response.json();
-
-  //       console.log(logementsData);
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   };
-  //   fetchData();
+  //   fetch("./data/logements.json").then((logement) => {
+  //     logement.json().then((logement) => {
+  //       setData(logement);
+  //       console.log(logement);
+  //     });
+  //   });
   // }, []);
 
-  // console.log({ props });
   return (
     <>
       <ApartmentList />

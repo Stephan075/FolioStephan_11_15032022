@@ -1,24 +1,39 @@
+import { useEffect } from "react";
 import { useState } from "react";
 import "./carrousel.css";
 
 const Carrousel = ({ img }) => {
-  const [counterImg, setCounterImg] = useState(0);
+  const [counterImg, setCounterImg] = useState(-1);
+  const [currImg, setCurrImg] = useState("");
 
-  const prevClick = () => {
-    // naviger au counter
-    if (counterImg === 0) {
-      setCounterImg(img.length - 1);
-    } else {
-      setCounterImg(counterImg - 1);
-    }
-  };
+  useEffect(() => {
+    setCurrImg(img[0]);
+  }, [img]);
 
+  // next img
   const nextClick = () => {
-    if (counterImg === img.length - 1) {
-      setCounterImg(0);
-    } else {
-      setCounterImg(counterImg + 1);
-    }
+    setCounterImg((counterImg + 1) % img.length);
+
+    setCurrImg(img[Math.abs(counterImg)]);
+  };
+  // // next img
+  // const nextClick = () => {
+  //   setCounterImg((counterImg + 1) % img.length);
+  //   // if (counterImg === 0) {
+  //   //   setCounterImg(img.length - 1);
+  //   //   console.log(img);
+  //   // } else {
+  //   //   setCounterImg(counterImg - 1);
+  //   // }
+  //   setCurrImg(img[Math.abs(counterImg)]);
+  // };
+
+  // prev img
+  const prevClick = () => {
+    // ex: Modulo on va rester entre  % 6 img return 0
+    setCounterImg((counterImg - 1) % img.length);
+    // Math.abs val abs du cunter
+    setCurrImg(img[Math.abs(counterImg)]);
   };
 
   return (
@@ -27,20 +42,19 @@ const Carrousel = ({ img }) => {
         ❰
       </div>
       <div className="displayFrame">
-        {img.map((picture, index) => (
-          <img
-            className="carouselItem"
-            src={picture}
-            key={index}
-            alt={`visuelle de l'appartement numéro ${index}`}
-          />
-        ))}
+        <img
+          className="carouselItem"
+          src={currImg}
+          alt={`visuelle de l'appartement numéro `}
+        />
       </div>
       <div className="rightArrow" onClick={nextClick}>
         ❱
       </div>
       <div className="counterImg">
-        {counterImg + 1} / {img.length}
+        {/* {Math.abs(counterImg === -1 ? 1 : counterImg + 1)} / {img.length} */}
+        {/* {Math.abs(counterImg === 1 ? 1 : counterImg + 1)} / {img.length} */}
+        {Math.abs(counterImg + 1)} / {img.length}
       </div>
     </div>
   );
