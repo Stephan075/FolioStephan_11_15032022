@@ -1,27 +1,23 @@
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import React from "react";
 import ReactDOM from "react-dom";
-import { Switch } from "react-router-dom";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import E404 from "./components/E404/E404";
+import NotFound from "./components/E404/E404";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import "./index.css";
 import AboutPage from "./pages/about";
 import Home from "./pages/Home";
+import ApartementDetailsPage from "./pages/apartement-details";
 
 ReactDOM.render(
   <Router>
     <Header />
     <Switch>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route exact path="/about">
-        <AboutPage />
-      </Route>
-      <Route>
-        <E404 />
-      </Route>
+      <Route exact path="/" component={Home} />
+      <Route path="/accueil" component={Home} />
+      <Route path="/about" component={AboutPage} />
+      <Route path="/apartementDetails/:id" component={ApartementDetailsPage} />
+      <Route component={NotFound}></Route>
     </Switch>
     <Footer />
   </Router>,

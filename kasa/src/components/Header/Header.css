@@ -15,11 +15,21 @@ header {
   color: #ff6060;
   font-family: var(--font-family);
 }
+.navList {
+  display: flex;
+}
 .navItem {
   margin: 3rem;
 }
+.nav-link {
+  color: #ff6060;
+}
 .navItem:nth-last-child(1) {
   margin-right: 0;
+}
+
+.active {
+  text-decoration: underline;
 }
 
 /* Responsive */

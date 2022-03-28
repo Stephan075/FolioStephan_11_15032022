@@ -1,20 +1,29 @@
 import "./header.css";
 import logo from "../../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Route, Link, NavLink } from "react-router-dom";
+
+const ListItemLink = ({ to, name }) => (
+  <Route
+    path={to}
+    children={({ match }) => (
+      <li className="navItem">
+        <NavLink exact to={to} activeClassName="active" className="nav-link">
+          {name}
+        </NavLink>
+      </li>
+    )}
+  />
+);
 
 const Header = () => {
   return (
     <header>
       <img src={logo} alt="logo kasa" className="logo" />
       <nav className="navHeader">
-        <Link to="/" className="navItem">
-          Accueil
-        </Link>
-        <Link to="/about" className="navItem">
-          A Propos
-        </Link>
-        {/* <div className="navItem">Accueil</div>
-        <div className="navItem">A Propos</div> */}
+        <ul className="navList">
+          <ListItemLink to="/accueil" name="Accueil" />
+          <ListItemLink to="/about" name="A Propos" />
+        </ul>
       </nav>
     </header>
   );
