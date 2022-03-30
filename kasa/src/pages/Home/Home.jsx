@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 import ApartmentList from "../../components/apartment-list/ApartmentList.js";
 
 const Home = (props) => {

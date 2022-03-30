@@ -1,18 +1,33 @@
 import "./header.css";
 import logo from "../../assets/logo.png";
-import { Route, Link, NavLink } from "react-router-dom";
+import { Route, NavLink, Link } from "react-router-dom";
 
 const ListItemLink = ({ to, name }) => (
   <Route
     path={to}
+    // match pour savoir si l'URL match ou non
+    // Le composant est appelé même si la route ne match pas contrairement a render
     children={({ match }) => (
       <li className="navItem">
-        <NavLink exact to={to} activeClassName="active" className="nav-link">
+        <Link exact to={to} className={match ? "nav-link active" : "nav-link"}>
           {name}
-        </NavLink>
+        </Link>
       </li>
     )}
   />
+
+  // Avec NavLink Pas besoin d'utiliser match, on peut utiliser  activeClassName pour lui passer des classes ou activeStyle pour lui passer un objet de style.
+
+  // <Route
+  //   path={to}
+  //   children={({ match }) => (
+  //     <li className="navItem">
+  //       <NavLink exact to={to} activeClassName="active" className="nav-link">
+  //         {name}
+  //       </NavLink>
+  //     </li>
+  //   )}
+  // />
 );
 
 const Header = () => {

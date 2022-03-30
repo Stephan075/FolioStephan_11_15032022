@@ -7,6 +7,7 @@ import Rating from "../../components/rating/Rating.js";
 import Collapsible from "../../components/collapsible/Collapsible.js";
 
 const ApartementDetailsPage = (props) => {
+  // déclarer quelque élement quand atd dans le state
   const [apartement, setApartement] = useState({
     tags: [],
     equipments: [],

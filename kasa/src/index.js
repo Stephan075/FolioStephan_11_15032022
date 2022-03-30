@@ -10,8 +10,10 @@ import Home from "./pages/Home/Home";
 import ApartementDetailsPage from "./pages/apartement-details/ApartementDetailsPage";
 
 ReactDOM.render(
+  // Composant de base qui doit contenir tous les composants utilisant le Router
   <Router>
     <Header />
+    {/* Afficher le premier composant Route qui match l'URL. */}
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/accueil" component={Home} />

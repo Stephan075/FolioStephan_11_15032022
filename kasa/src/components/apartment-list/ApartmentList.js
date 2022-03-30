@@ -8,6 +8,7 @@ const ApartmentList = (props) => {
     <section className="ApartmentList">
       <ul className="cards">
         {Logements.map(({ id, title, cover }) => (
+          // on lui passe en props les params necessaire
           <ApartmentElement
             id={id}
             key={id}
