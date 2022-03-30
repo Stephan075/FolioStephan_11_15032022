@@ -35,30 +35,40 @@ const ApartementDetailsPage = (props) => {
         <h2 className="titleapartement">{apartement.title}</h2>
         <p className="subtitleapartement">{apartement.location}</p>
         <div className="profile">
+          <h2 className="profile-username">{apartement.host.name}</h2>
           <div className="profile-image">
             <img src={apartement.host.picture} alt="" />
           </div>
-          <h2 className="profile-username">{apartement.host.name}</h2>
         </div>
-        <Rating rating={apartement.rating} />
 
-        <ul className="tag">
-          {apartement.tags.map((tag, index) => (
-            <li key={index}> {tag} </li>
-          ))}
-        </ul>
-
-        <Collapsible label="Description">
-          <p>{apartement.description}</p>
-        </Collapsible>
-
-        <Collapsible label="Equipments">
-          <ul className="collapse_list">
-            {apartement.equipments.map((equipment) => (
-              <li key={equipment}> {equipment}</li>
+        <div className="ratingAndTaglogement">
+          <ul className="tag">
+            {apartement.tags.map((tag, index) => (
+              <li key={index} className="tag-content">
+                {tag}
+              </li>
             ))}
           </ul>
-        </Collapsible>
+          <Rating rating={apartement.rating} />
+        </div>
+
+        <div className="collapsible-container">
+          <div className="collapsible-item">
+            <Collapsible label="Description">
+              <p>{apartement.description}</p>
+            </Collapsible>
+          </div>
+
+          <div className="collapsible-item">
+            <Collapsible label="Equipments">
+              <ul className="collapse_list">
+                {apartement.equipments.map((equipment) => (
+                  <li key={equipment}> {equipment}</li>
+                ))}
+              </ul>
+            </Collapsible>
+          </div>
+        </div>
       </div>
     </>
   );

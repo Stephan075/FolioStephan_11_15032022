@@ -5,9 +5,9 @@ import NotFound from "./components/E404/E404";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import "./index.css";
-import AboutPage from "./pages/about";
-import Home from "./pages/Home";
-import ApartementDetailsPage from "./pages/apartement-details";
+import AboutPage from "./pages/about/about";
+import Home from "./pages/Home/Home";
+import ApartementDetailsPage from "./pages/apartement-details/ApartementDetailsPage";
 
 ReactDOM.render(
   <Router>
