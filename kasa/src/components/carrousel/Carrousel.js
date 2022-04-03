@@ -1,39 +1,19 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./carrousel.css";
 
 const Carrousel = ({ img }) => {
-  const [counterImg, setCounterImg] = useState(-1);
-  const [currImg, setCurrImg] = useState("");
-
-  useEffect(() => {
-    setCurrImg(img[0]);
-  }, [img]);
+  const [currImg, setCurrImg] = useState(0);
 
   // next img
   const nextClick = () => {
-    setCounterImg((counterImg + 1) % img.length);
-
-    setCurrImg(img[Math.abs(counterImg)]);
+    const index = currImg < img.length - 1 ? currImg + 1 : 0;
+    setCurrImg(index);
   };
-  // // next img
-  // const nextClick = () => {
-  //   setCounterImg((counterImg + 1) % img.length);
-  //   // if (counterImg === 0) {
-  //   //   setCounterImg(img.length - 1);
-  //   //   console.log(img);
-  //   // } else {
-  //   //   setCounterImg(counterImg - 1);
-  //   // }
-  //   setCurrImg(img[Math.abs(counterImg)]);
-  // };
 
   // prev img
   const prevClick = () => {
-    // ex: Modulo on va rester entre  % 6 img return 0
-    setCounterImg((counterImg - 1) % img.length);
-    // Math.abs val abs du cunter
-    setCurrImg(img[Math.abs(counterImg)]);
+    const index = currImg > 0 ? currImg - 1 : img.length - 1;
+    setCurrImg(index);
   };
 
   return (
@@ -44,7 +24,7 @@ const Carrousel = ({ img }) => {
       <div className="displayFrame">
         <img
           className="carouselItem"
-          src={currImg}
+          src={img[currImg]}
           alt={`visuelle de l'appartement numéro `}
         />
       </div>
@@ -52,9 +32,7 @@ const Carrousel = ({ img }) => {
         ❱
       </div>
       <div className="counterImg">
-        {/* {Math.abs(counterImg === -1 ? 1 : counterImg + 1)} / {img.length} */}
-        {/* {Math.abs(counterImg === 1 ? 1 : counterImg + 1)} / {img.length} */}
-        {Math.abs(counterImg + 1)} / {img.length}
+        {currImg + 1} / {img.length}
       </div>
     </div>
   );

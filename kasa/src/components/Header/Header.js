@@ -9,7 +9,7 @@ const ListItemLink = ({ to, name }) => (
     // Le composant est appelé même si la route ne match pas contrairement a render
     children={({ match }) => (
       <li className="navItem">
-        <Link exact to={to} className={match ? "nav-link active" : "nav-link"}>
+        <Link to={to} className={match ? "nav-link active" : "nav-link"}>
           {name}
         </Link>
       </li>

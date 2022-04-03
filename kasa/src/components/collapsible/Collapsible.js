@@ -7,6 +7,7 @@ const Collapsible = (props) => {
 
   // changer la direction de la flèche
   const transform = {
+    //  Opérateur logique &&
     transform: isOpen && "rotate(180deg)",
   };
 
